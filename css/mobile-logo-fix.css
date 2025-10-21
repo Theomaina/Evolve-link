@@ -1,0 +1,64 @@
+/* Critical Logo Fix for Mobile - Load First */
+
+/* Force logo visibility on mobile devices */
+@media (max-width: 991px) {
+  /* Override all logo hiding classes on mobile */
+  .header img[src*="logo"] {
+    display: block !important;
+    height: 50px !important;
+    width: auto !important;
+    max-height: 50px !important;
+    object-fit: contain;
+  }
+  
+  /* Light theme logo visibility */
+  html:not(.dark) .header img[src*="logo-light"] {
+    display: block !important;
+  }
+  
+  html:not(.dark) .header img[src*="logo-dark"] {
+    display: none !important;
+  }
+  
+  /* Dark theme logo visibility */
+  html.dark .header img[src*="logo-dark"] {
+    display: block !important;
+  }
+  
+  html.dark .header img[src*="logo-light"] {
+    display: none !important;
+  }
+  
+  /* Ensure logo container is visible */
+  .header .max-w-\[250px\],
+  .header .xl\:max-w-\[350px\] {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 100;
+    position: relative;
+  }
+  
+  /* Fix logo link */
+  .header a[href="/"],
+  .header a[href="/index.html"] {
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .header img[src*="logo"] {
+    height: 44px !important;
+    max-height: 44px !important;
+  }
+}
+
+@media (max-width: 374px) {
+  .header img[src*="logo"] {
+    height: 38px !important;
+    max-height: 38px !important;
+  }
+}
+

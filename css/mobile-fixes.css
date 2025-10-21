@@ -1,0 +1,815 @@
+/* ========================================
+   MINIMAL Mobile Fixes - HERO SECTION ONLY
+   All other sections use original Tailwind/styles
+   ======================================== */
+
+/* ========================================
+   HERO SECTION MOBILE FIXES
+   ======================================== */
+
+@media (max-width: 991px) {
+  /* Fix hero section height on mobile */
+  #home {
+    height: auto !important;
+    min-height: auto;
+    /* Padding-top handled in mobile-hero-simple.css */
+    padding-bottom: 2rem !important;
+    margin-top: 0 !important;
+  }
+
+  /* Fix negative margin issue */
+  #home .xl\:container,
+  #home .container {
+    margin-bottom: 0 !important;
+  }
+  
+  #home .mb-\[-30px\] {
+    margin-bottom: 0 !important;
+  }
+
+  /* Fix wrapper spacing - ensure proper gap between text and image */
+  #home .flex.flex-wrap.items-center {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    gap: 0.25rem !important;
+  }
+  
+  /* Fix column padding */
+  #home .w-full.px-3,
+  #home .w-full.px-4 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Image column - add top margin for separation */
+  #home .w-full.px-4.lg\:w-1\/2:last-child,
+  #home .w-full.lg\:w-1\/2:last-child {
+    margin-top: 2rem !important;
+  }
+
+  /* Hero text container */
+  #home .max-w-\[530px\] {
+    max-width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 0 !important;
+  }
+
+  /* Hero text adjustments */
+  #home h1 {
+    font-size: 1.875rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  #home p {
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Hero badge */
+  #home .bg-primary\/5 {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Hero buttons container */
+  #home .flex.flex-wrap.items-center.justify-center,
+  #home .flex.flex-wrap.items-center.lg\:justify-start {
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch !important;
+  }
+
+  /* All hero buttons */
+  #home .flex.flex-wrap a,
+  #home .flex.flex-wrap.items-center a {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Primary CTA button (Get Started) */
+  #home a[href="#services"],
+  #home a.bg-primary {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    border: 2px solid var(--color-primary) !important;
+  }
+  
+  /* Secondary button (Get In Touch) */
+  #home a[href="#about"],
+  #home a.text-dark,
+  #home a[class*="text-dark"] {
+    background-color: transparent !important;
+    color: var(--color-dark) !important;
+    border: 2px solid var(--color-primary) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dark mode secondary button */
+  html.dark #home a[href="#about"],
+  html.dark #home a.text-dark,
+  html.dark #home a[class*="text-dark"] {
+    background-color: rgba(20, 184, 166, 0.1) !important;
+    color: var(--color-white) !important;
+    border: 2px solid var(--color-primary) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Hover states */
+  #home a[href="#about"]:hover,
+  html.dark #home a[href="#about"]:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+  }
+}
+
+@media (max-width: 639px) {
+  #home {
+    /* Padding-top handled in mobile-hero-simple.css */
+    padding-bottom: 2rem !important;
+    min-height: auto;
+    margin-top: 0 !important;
+  }
+  
+  #home .flex.flex-wrap.items-center {
+    gap: 0.25rem !important;
+  }
+
+  #home h1 {
+    font-size: 1.625rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  #home p {
+    font-size: 0.9375rem !important;
+    line-height: 1.6 !important;
+  }
+
+  #home .bg-primary\/5 {
+    font-size: 0.8125rem;
+  }
+  
+  #home .flex.flex-wrap a {
+    margin-bottom: 0 !important;
+  }
+  
+  #home .flex.flex-wrap a:first-child {
+    margin-bottom: 0.625rem !important;
+  }
+}
+
+@media (max-width: 374px) {
+  #home {
+    /* Padding-top handled in mobile-hero-simple.css */
+    padding-bottom: 1.5rem !important;
+    margin-top: 0 !important;
+  }
+  
+  #home h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  #home .h-\[560px\] {
+    height: 200px !important;
+  }
+  
+  #home .flex.flex-wrap a {
+    font-size: 0.9375rem !important;
+    padding: 0.875rem 1.25rem !important;
+  }
+  
+  #home .flex.flex-wrap.items-center {
+    gap: 0.25rem !important;
+  }
+}
+
+/* Circle dot fix for mobile only */
+@media (max-width: 767px) {
+  span.bg-primary.h-2.w-2.rounded-full {
+    padding: 0 !important;
+    width: 0.5rem !important;
+    height: 0.5rem !important;
+  }
+}
+
+/* ========================================
+   NOTE: ALL OTHER SECTIONS USE ORIGINAL STYLES
+   Only Hero section (#home) has custom mobile layout
+   ======================================== */
+
+/* ========================================
+   ABOUT US TABS - MOBILE FIX ONLY
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* About section tab buttons - horizontal and responsive */
+  #about .tabButtons {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
+    width: 100% !important;
+  }
+  
+  #about .tabButtons button {
+    flex: 1 1 0 !important;
+    font-size: 1.0625rem !important; /* 17px */
+    padding: 0.75rem 0.25rem !important; /* 12px top/bottom, 4px left/right */
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 639px) {
+  /* Even smaller on very small screens */
+  #about .tabButtons button {
+    font-size: 1rem !important; /* 16px */
+    padding: 0.625rem 0.125rem !important; /* 10px top/bottom, 2px left/right */
+  }
+}
+
+@media (max-width: 374px) {
+  /* Very compact on tiny screens */
+  #about .tabButtons button {
+    font-size: 0.9375rem !important; /* 15px */
+    padding: 0.5rem 0.125rem !important; /* 8px top/bottom, 2px left/right */
+  }
+}
+
+/* ========================================
+   NOTE: ONLY HERO & ABOUT TABS CUSTOMIZED
+   All other sections use original styles
+   ======================================== */
+
+/* ========================================
+   PORTFOLIO FILTER BUTTONS - MOBILE FIX
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* Portfolio filter buttons - horizontal scroll on mobile */
+  #portfolio .portfolio-btn-wrapper,
+  .portfolio-btn-wrapper {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 0.5rem !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  #portfolio .portfolio-btn-wrapper button,
+  .portfolio-btn-wrapper button {
+    font-size: 0.875rem !important; /* 14px */
+    padding: 0.625rem 1rem !important; /* 10px vertical, 16px horizontal */
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (max-width: 639px) {
+  /* Smaller buttons on very small screens */
+  #portfolio .portfolio-btn-wrapper button,
+  .portfolio-btn-wrapper button {
+    font-size: 0.8125rem !important; /* 13px */
+    padding: 0.5rem 0.875rem !important; /* 8px vertical, 14px horizontal */
+  }
+}
+
+@media (max-width: 374px) {
+  /* Very compact on tiny screens */
+  #portfolio .portfolio-btn-wrapper button,
+  .portfolio-btn-wrapper button {
+    font-size: 0.75rem !important; /* 12px */
+    padding: 0.5rem 0.75rem !important; /* 8px vertical, 12px horizontal */
+  }
+}
+
+/* ========================================
+   NOTE: CUSTOMIZED SECTIONS
+   - Hero Section (#home) - full custom layout
+   - About Us Tabs - horizontal responsive
+   - Portfolio Filters - horizontal scroll
+   All other sections use original styles
+   ======================================== */
+
+/* ========================================
+   SUPPORT/CONTACT INFO - MOBILE FIX
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* Support section contact info - center on mobile */
+  #support .flex.flex-wrap.pt-12,
+  #support .-mx-4.flex.flex-wrap.pt-12 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  #support .w-full.px-4.md\:w-1\/2,
+  #support .w-full.px-4.lg\:w-1\/4 {
+    width: 100% !important;
+    max-width: 400px !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Center the content inside */
+  #support .mb-6 {
+    text-align: center !important;
+  }
+  
+  /* Center headings and text */
+  #support h3,
+  #support p,
+  #support a {
+    text-align: center !important;
+  }
+  
+  /* Center social icons */
+  #support .flex.items-center.space-x-5 {
+    justify-content: center !important;
+  }
+  
+  #support .lg\:justify-end {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 639px) {
+  /* More compact on small screens */
+  #support .w-full.px-4.md\:w-1\/2,
+  #support .w-full.px-4.lg\:w-1\/4 {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* ========================================
+   NOTE: CUSTOMIZED SECTIONS
+   - Hero Section (#home) - full custom layout
+   - About Us Tabs - horizontal responsive
+   - Portfolio Filters - horizontal scroll
+   - Support/Contact Info - centered on mobile
+   All other sections use original styles
+   ======================================== */
+
+/* ========================================
+   FOOTER LOGO & SOCIAL - MOBILE FIX
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* Footer logo and social section - center on mobile */
+  footer .w-full.px-4.sm\:w-1\/2,
+  footer .w-full.px-4.md\:w-5\/12,
+  footer .w-full.px-4.lg\:w-3\/12,
+  footer .w-full.px-4.xl\:w-3\/12 {
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  /* Center the inner container */
+  footer .mb-20.max-w-\[330px\] {
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  
+  /* Center logo */
+  footer .mb-6.inline-block {
+    display: flex !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  /* Center description text */
+  footer .text-dark-text.mb-10 {
+    text-align: center !important;
+  }
+  
+  /* Center social icons */
+  footer .flex.items-center.space-x-5 {
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* ========================================
+   NOTE: CUSTOMIZED SECTIONS
+   - Hero Section (#home) - full custom layout
+   - About Us Tabs - horizontal responsive
+   - Portfolio Filters - horizontal scroll
+   - Support/Contact Info - centered
+   - Footer Logo & Social - centered
+   All other sections use original styles
+   ======================================== */
+
+/* ========================================
+   FOOTER LINK COLUMNS - MOBILE FIX
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* Footer link columns (Company, Support) - center on mobile */
+  footer .w-1\/2.px-4,
+  footer .w-1\/2.px-4.md\:w-3\/12,
+  footer .w-1\/2.px-4.lg\:w-3\/12,
+  footer .w-1\/2.px-4.xl\:w-2\/12 {
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Center headings */
+  footer h3 {
+    text-align: center !important;
+  }
+  
+  /* Center link lists */
+  footer ul {
+    text-align: center !important;
+    list-style: none !important;
+    padding: 0 !important;
+  }
+  
+  /* Center individual links */
+  footer ul li {
+    text-align: center !important;
+  }
+  
+  footer ul li a {
+    display: inline-block !important;
+    text-align: center !important;
+  }
+}
+
+/* ========================================
+   NOTE: CUSTOMIZED SECTIONS
+   - Hero Section (#home) - full custom layout
+   - About Us Tabs - horizontal responsive
+   - Portfolio Filters - horizontal scroll
+   - Support/Contact Info - centered
+   - Footer Logo & Social - centered
+   - Footer Link Columns - centered
+   All other sections use original styles
+   ======================================== */
+
+/* ========================================
+   SUPPORT SECTION TITLE - MOBILE FIX
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* Support section title/heading - center on mobile */
+  #support .w-full.px-4.lg\:w-1\/2 {
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  /* Center the inner container */
+  #support .max-w-\[500px\] {
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  
+  /* Center title span */
+  #support .title {
+    text-align: center !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  
+  /* Center heading */
+  #support h2 {
+    text-align: center !important;
+  }
+  
+  /* Center description */
+  #support p {
+    text-align: center !important;
+  }
+}
+
+/* ========================================
+   NOTE: CUSTOMIZED SECTIONS
+   - Hero Section (#home) - full custom layout
+   - About Us Tabs - horizontal responsive
+   - Portfolio Filters - horizontal scroll
+   - Support Section Title - centered
+   - Support Contact Info - centered
+   - Footer Logo & Social - centered
+   - Footer Link Columns - centered
+   All other sections use original styles
+   ======================================== */
+
+/* ========================================
+   MOBILE MENU BUTTON - REMOVE TAP OUTLINE
+   ======================================== */
+
+@media (max-width: 991px) {
+  /* Remove tap highlight and outline on menu button */
+  .menu-toggler,
+  button.menu-toggler {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    outline: none !important;
+    border: none !important;
+  }
+  
+  /* Remove focus outline */
+  .menu-toggler:focus,
+  .menu-toggler:active,
+  button.menu-toggler:focus,
+  button.menu-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  /* Remove SVG tap highlight */
+  .menu-toggler svg {
+    -webkit-tap-highlight-color: transparent !important;
+    pointer-events: none !important;
+  }
+}
+
+/* ========================================
+   NOTE: CUSTOMIZED SECTIONS
+   - Hero Section (#home) - full custom layout
+   - About Us Tabs - horizontal responsive
+   - Portfolio Filters - horizontal scroll
+   - Support Section - fully centered
+   - Footer - fully centered
+   - Mobile Menu Button - no tap outline
+   All other sections use original styles
+   ======================================== */
+
+/* ========================================
+   SECTION TITLES - DARK MODE FIX
+   ======================================== */
+
+/* Fix title visibility in dark mode */
+html.dark .title,
+html.dark span.title {
+  color: rgba(255, 255, 255, 0.7) !important; /* Light grey, 70% opacity */
+}
+
+/* Keep light mode as is (no changes) */
+
+/* Alternative lighter colors for dark mode (choose one):
+   Option 1: rgba(255, 255, 255, 0.7) - Light grey (70%)
+   Option 2: rgba(255, 255, 255, 0.8) - Lighter grey (80%)
+   Option 3: #9CA3AF - Tailwind gray-400
+   Option 4: #D1D5DB - Tailwind gray-300
+*/
+
+/* ========================================
+   NOTE: CUSTOMIZED SECTIONS
+   - Hero Section (#home) - full custom layout
+   - About Us Tabs - horizontal responsive
+   - Portfolio Filters - horizontal scroll
+   - Support Section - centered
+   - Footer - centered
+   - Mobile Menu - no tap outline
+   - Section Titles - visible in dark mode
+   All other sections use original styles
+   ======================================== */
+
+/* ========================================
+   ABOUT US TAB CONTENT - MOBILE FIX
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* About section - stack content vertically */
+  #about .tabPanel .flex.flex-wrap,
+  #about .tabPanel .-mx-4.flex.flex-wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* All columns full width and centered */
+  #about .tabPanel .w-full.px-4,
+  #about .tabPanel .w-full.px-4.lg\:w-1\/2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Center the inner text container */
+  #about .tabPanel .max-w-\[565px\],
+  #about .tabPanel .max-w-\[600px\] {
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  
+  /* Center all text elements */
+  #about .tabPanel h2,
+  #about .tabPanel h3 {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  #about .tabPanel p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  /* Center images too */
+  #about .tabPanel .h-\[490px\] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* ========================================
+   NOTE: CUSTOMIZED SECTIONS
+   - Hero Section (#home) - full custom layout
+   - About Us Tabs - horizontal responsive
+   - About Us Tab Content - centered on mobile
+   - Portfolio Filters - horizontal scroll
+   - Support Section - centered
+   - Footer - centered
+   - Mobile Menu - no tap outline
+   - Section Titles - visible in dark mode
+   All other sections use original styles
+   ======================================== */
+
+/* ========================================
+   SECTION HEADINGS - MOBILE RESPONSIVE
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* Make all section headings responsive */
+  section h2 {
+    font-size: 1.75rem !important; /* 28px */
+    line-height: 1.3 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  /* Large heading variants */
+  section .text-3xl,
+  section .sm\:text-4xl,
+  section .md\:text-\[50px\] {
+    font-size: 1.75rem !important; /* 28px */
+    line-height: 1.3 !important;
+  }
+  
+  section .text-2xl,
+  section .sm\:text-\[40px\] {
+    font-size: 1.5rem !important; /* 24px */
+    line-height: 1.3 !important;
+  }
+  
+  /* Ensure headings don't overflow */
+  section h1,
+  section h2,
+  section h3 {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+  
+  /* Max widths should be 100% on mobile */
+  section .max-w-\[570px\],
+  section .max-w-\[620px\],
+  section .max-w-\[450px\] {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (max-width: 639px) {
+  /* Even smaller on very small screens */
+  section h2 {
+    font-size: 1.5rem !important; /* 24px */
+    line-height: 1.25 !important;
+  }
+  
+  section .text-3xl,
+  section .sm\:text-4xl,
+  section .md\:text-\[50px\] {
+    font-size: 1.5rem !important; /* 24px */
+    line-height: 1.25 !important;
+  }
+  
+  section .text-2xl,
+  section .sm\:text-\[40px\] {
+    font-size: 1.25rem !important; /* 20px */
+    line-height: 1.3 !important;
+  }
+}
+
+@media (max-width: 374px) {
+  /* Very compact on tiny screens */
+  section h2 {
+    font-size: 1.375rem !important; /* 22px */
+    line-height: 1.2 !important;
+  }
+  
+  section .text-3xl,
+  section .sm\:text-4xl,
+  section .md\:text-\[50px\] {
+    font-size: 1.375rem !important; /* 22px */
+  }
+  
+  section .text-2xl {
+    font-size: 1.125rem !important; /* 18px */
+  }
+}
+
+/* ========================================
+   NOTE: CUSTOMIZED SECTIONS
+   - Hero Section (#home) - full custom layout
+   - About Us Tabs - horizontal responsive
+   - About Us Tab Content - centered on mobile
+   - Portfolio Filters - horizontal scroll
+   - Support Section - centered
+   - Footer - centered
+   - Mobile Menu - no tap outline
+   - Section Titles - visible in dark mode
+   - Section Headings - responsive sizing
+   All other sections use original styles
+   ======================================== */
+
+/* ========================================
+   TEAM SECTION HEADING - SPECIFIC FIX
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* Team section heading - make smaller to fit */
+  #team h2 {
+    font-size: 1.5rem !important; /* 24px */
+    line-height: 1.3 !important;
+    max-width: 100% !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 639px) {
+  /* Even smaller on small screens */
+  #team h2 {
+    font-size: 1.375rem !important; /* 22px */
+    line-height: 1.25 !important;
+  }
+}
+
+@media (max-width: 374px) {
+  /* Very small on tiny screens */
+  #team h2 {
+    font-size: 1.25rem !important; /* 20px */
+    line-height: 1.2 !important;
+  }
+}
+
+/* ========================================
+   PORTFOLIO FILTERS - DESKTOP SPACING
+   ======================================== */
+
+@media (min-width: 768px) {
+  /* Add spacing between portfolio filter buttons on desktop */
+  #portfolio .portfolio-btn-wrapper,
+  .portfolio-btn-wrapper {
+    gap: 0.75rem !important; /* 12px gap between buttons */
+  }
+  
+  #portfolio .portfolio-btn-wrapper button,
+  .portfolio-btn-wrapper button {
+    margin: 0 !important; /* Remove any margin, use gap instead */
+  }
+}

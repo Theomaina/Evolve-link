@@ -1,0 +1,179 @@
+/* SIMPLE Mobile Hero Fix - No BS */
+
+@media (max-width: 991px) {
+  /* Hero section spacing - space from header */
+  #home {
+    padding-top: 5.3125rem !important; /* 85px - reduced space from fixed header */
+    padding-bottom: 2rem !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Gap between text div and image div */
+  #home > div > .flex.flex-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.875rem !important; /* 14px - spacing between text and images */
+  }
+  
+  /* Image container - ONLY height change */
+  #home .h-\[560px\] {
+    height: 350px;
+  }
+  
+  /* Make top-right image BIGGER and positioned at top */
+  #home .absolute.top-0.right-0 {
+    width: 90% !important; /* Much larger - like desktop lg:w-11/12 */
+    top: 0 !important;
+    right: 0 !important;
+    z-index: 5; /* Ensure it's visible */
+  }
+  
+  /* Make bottom-left image SMALLER and lower */
+  #home .absolute.bottom-0.left-0.z-10 {
+    width: 55% !important; /* Smaller */
+    bottom: 0 !important;
+    left: 0 !important;
+  }
+  
+  /* Keep images proportional */
+  #home .h-\[560px\] img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Text and buttons */
+  #home .max-w-\[530px\] {
+    max-width: 100%;
+  }
+  
+  /* Badge - just make it responsive, DON'T touch the circle */
+  #home .bg-primary\/5 {
+    font-size: 0.9375rem !important;
+  }
+  
+  /* Circle dot - DON'T override anything, use desktop h-2 w-2 rounded-full as-is */
+    
+  #home h1 {
+    font-size: 1.875rem !important;
+    line-height: 1.25 !important;
+  }
+  
+  /* Buttons side by side horizontally on mobile */
+  /* Target only the button container, not the main hero flex container */
+  #home .wow.fadeInUp.flex.flex-wrap {
+    flex-direction: row !important;
+    gap: 0.5rem !important; /* 8px gap between buttons */
+  }
+  
+  #home .wow.fadeInUp.flex.flex-wrap a {
+    flex: 1 1 0; /* Equal width buttons */
+    min-width: 0; /* Allow shrinking */
+    justify-content: center;
+    padding: 0.625rem 0.75rem !important; /* Smaller horizontal padding for mobile */
+    font-size: 0.875rem !important; /* 14px - slightly smaller text */
+    white-space: nowrap;
+    margin: 0 !important;
+  }
+  
+  /* Make "Get In Touch" button visible */
+  #home a[href="#about"] {
+    background: rgba(20, 184, 166, 0.1) !important;
+    border: 2px solid #14b8a6 !important;
+  }
+  
+  /* Light mode - dark text */
+  html:not(.dark) #home a[href="#about"] {
+    color: #14b8a6 !important;
+  }
+  
+  /* Dark mode - white text */
+  html.dark #home a[href="#about"] {
+    color: white !important;
+  }
+}
+
+@media (max-width: 639px) {
+  /* Keep consistent top spacing */
+  #home {
+    padding-top: 4.875rem !important; /* 78px - reduced space from header */
+  }
+  
+  #home .h-\[560px\] {
+    height: 280px;
+  }
+  
+  /* Smaller badge text on small screens */
+  #home .bg-primary\/5 {
+    font-size: 0.875rem !important;
+  }
+  
+  /* Circle - use desktop classes, don't override */
+  
+  #home h1 {
+    font-size: 1.625rem !important;
+  }
+  
+  /* Maintain size difference on small screens */
+  #home .absolute.top-0.right-0 {
+    width: 85% !important;
+  }
+  
+  #home .absolute.bottom-0.left-0.z-10 {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 374px) {
+  /* Keep consistent top spacing */
+  #home {
+    padding-top: 4.375rem !important; /* 70px - reduced space from header */
+  }
+  
+  #home .h-\[560px\] {
+    height: 240px;
+  }
+  
+  /* Even smaller badge text on tiny screens */
+  #home .bg-primary\/5 {
+    font-size: 0.8125rem !important;
+  }
+  
+  /* Circle - use desktop classes, don't override */
+  
+  #home h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Smaller buttons on tiny screens */
+  #home .wow.fadeInUp.flex.flex-wrap a {
+    padding: 0.5rem 0.5rem !important; /* 8px vertical, 8px horizontal */
+    font-size: 0.8125rem !important; /* 13px - even smaller text */
+  }
+  
+  /* Keep size difference on extra small screens */
+  #home .absolute.top-0.right-0 {
+    width: 80% !important;
+  }
+  
+  #home .absolute.bottom-0.left-0.z-10 {
+    width: 48% !important;
+  }
+}
+
+
+/* ========================================
+   DESKTOP ONLY - HERO POSITIONING
+   ======================================== */
+
+@media (min-width: 992px) {
+  /* Move hero content down 20px on desktop only */
+  #home > div.mb-\[-30px\],
+  #home .px-4.xl\:container.w-full.mb-\[-30px\] {
+    margin-bottom: -10px !important; /* Changed from -30px to -10px = 20px down */
+  }
+  
+  /* Alternative: add padding-top to move content down */
+  #home > div > .flex.flex-wrap {
+    padding-top: 20px;
+  }
+}

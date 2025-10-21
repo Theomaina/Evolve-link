@@ -1,0 +1,41 @@
+# Clean URLs - remove .html extension
+
+# Main pages
+/contact /contact.html 200
+/login /login.html 200
+/signin /signin.html 200
+/blogs /blogs.html 200
+/portfolio /portfolio.html 200
+/casestudy /casestudy.html 200
+
+# Article pages
+/articles/brand-connections /articles/brand-connections.html 200
+/articles/coding-speed-tips /articles/coding-speed-tips.html 200
+/articles/data-driven-marketing /articles/data-driven-marketing.html 200
+/articles/ecommerce-conversions /articles/ecommerce-conversions.html 200
+/articles/engaging-content /articles/engaging-content.html 200
+/articles/free-advertising-online-business /articles/free-advertising-online-business.html 200
+/articles/improve-design-skills /articles/improve-design-skills.html 200
+/articles/seo-techniques-2025 /articles/seo-techniques-2025.html 200
+/articles/social-media-marketing-2025 /articles/social-media-marketing-2025.html 200
+
+# Casestudy pages
+/casestudy/ats-travel /casestudy/ats-travel.html 200
+/casestudy/banking-app /casestudy/banking-app.html 200
+/casestudy/ecommerce-platform /casestudy/ecommerce-platform.html 200
+/casestudy/education-platform /casestudy/education-platform.html 200
+/casestudy/event-management /casestudy/event-management.html 200
+/casestudy/fintech-platform /casestudy/fintech-platform.html 200
+/casestudy/fitness-app /casestudy/fitness-app.html 200
+/casestudy/food-delivery /casestudy/food-delivery.html 200
+/casestudy/healthcare-app /casestudy/healthcare-app.html 200
+/casestudy/jukwaa-sports /casestudy/jukwaa-sports.html 200
+/casestudy/masinga-yellowcard /casestudy/masinga-yellowcard.html 200
+/casestudy/real-estate-platform /casestudy/real-estate-platform.html 200
+/casestudy/restaurant-chain /casestudy/restaurant-chain.html 200
+/casestudy/social-media-app /casestudy/social-media-app.html 200
+/casestudy/travel-booking /casestudy/travel-booking.html 200
+/casestudy/yellowcard-twice-nice /casestudy/yellowcard-twice-nice.html 200
+
+# Handle root page
+/ /index.html 200
